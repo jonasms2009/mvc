@@ -37,7 +37,7 @@ class fastphp
         if(isset($classMap[$className])){
             $file = $classMap[$className];
         }elseif (strpos($className, '\\') !== false) {
-            // 包含应用（application目录）文件
+            // 包含应用（app目录）文件
             $file = APP_PATH . str_replace('\\', '/', $className) . '.php';
             if (!is_file($file)) {
                 return;
